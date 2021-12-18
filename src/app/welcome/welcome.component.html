@@ -1,0 +1,14 @@
+<div id='welcome' class='text'>Welcome message</div>
+<div id='note' class='text'>Note that the service is only available to legal entities</div>
+<div id='proceed' class='text'>Enter your email to proceed. <br> Your email will be your username in internet bank.</div>
+
+<div>
+  <form #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm.value)" >
+  <div>
+    <input [(ngModel)]="email" name="email" id="email"  required type="email" class='form-control' placeholder="INFO@COMPANY.COM">
+
+  </div>
+  <button type="button" class="email-sign">@</button>
+  <button type="submit" class="button-submit">START</button>
+</form>
+</div>
