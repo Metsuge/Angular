@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { FormsModule } from '@angular/forms';
+import { SecondPageComponent } from './second-page/second-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SecondPageComponent
   ],
   imports: [
     BrowserModule,

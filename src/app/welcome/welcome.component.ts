@@ -11,11 +11,16 @@ import {FormGroup} from '@angular/forms';
 export class WelcomeComponent implements OnInit {
   email: string = '';
   constructor(){}
+
+  emailPattern = '@'
   ngOnInit():void{
 
   }
 
   onSubmit(x:any){
-    console.log(x)
+    console.log(x);
+    console.log(x.email.match(this.emailPattern));
+
+
   }
 }
