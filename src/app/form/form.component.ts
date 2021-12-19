@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -8,10 +8,15 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private route: Router){
+  constructor(private route: ActivatedRoute){
   }
-  email: any;
+  email:any;
   ngOnInit(): void {
+    this.route.queryParams.subscribe((params: any) =>{
+      console.log(params);
+      this.email = params.data
+    })
   }
+
 
 }

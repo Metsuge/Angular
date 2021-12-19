@@ -8,11 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./second-page.component.scss']
 })
 export class SecondPageComponent implements OnInit {
-
   email: any;
-
-  constructor(private route: ActivatedRoute) { }
-
+  constructor(private route:ActivatedRoute,private router:Router) { }
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: any) =>{
       console.log(params);
@@ -20,4 +17,7 @@ export class SecondPageComponent implements OnInit {
     })
   }
 
+  navToForm(){
+    this.router.navigate(['/form'], {queryParams:{data:this.email}})
+  }
 }

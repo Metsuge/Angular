@@ -4,8 +4,8 @@
 
   <div id="send-again-cont">
     <!-- now send again goes to home page because empty string in routerLink="" means home page -->
-    <button  type="submit" id="button-submit">CLOSE THIS WINDOW</button>
-    <div id='send-again' class='text'>did not receive email?<br> send again </div>
+    <button  type="submit"  id="button-submit">CLOSE THIS WINDOW</button>
+    <button type="button" id='send-again'  (click)="navToForm()" class='text'>did not receive email?<br> send again </button>
 
   </div>
 </div>

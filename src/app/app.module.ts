@@ -9,13 +9,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { FormComponent } from './form/form.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     SecondPageComponent,
-    FormComponent
+    FormComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
