@@ -1,11 +1,12 @@
 <div id="main-second-page">
-  <div id='welcome' class='text'>Verification email was sent to: <br> {{email}} </div>
-  <div id='proceed' class='text'>Follow the link in a message to proceed with registration</div>
+  <div id='line1' class='text'>Verification email was sent to: <br> {{email}} </div>
+  <div id='line2' class='text'>Follow the link in a message to proceed with registration</div>
 
-  <div id="send-again-cont">
+
     <!-- now send again goes to home page because empty string in routerLink="" means home page -->
-    <button  type="submit"  id="button-submit">CLOSE THIS WINDOW</button>
-    <button type="button" id='send-again'  (click)="navToForm()" class='text'>did not receive email?<br> send again </button>
+    <button  type="submit"  id="button-submit" (click)="navToForm()">CLOSE THIS WINDOW</button>
+    <div id="not-received">did not receive email?</div>
+    <button type="button" id='send-again'  (click)="navBack()" class='text'>send again </button>
 
-  </div>
+
 </div>

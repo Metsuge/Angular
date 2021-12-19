@@ -20,4 +20,8 @@ export class SecondPageComponent implements OnInit {
   navToForm(){
     this.router.navigate(['/form'], {queryParams:{data:this.email}})
   }
+
+  navBack(){
+    this.router.navigate([''])
+  }
 }
