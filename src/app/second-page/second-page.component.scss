@@ -1,0 +1,36 @@
+#main-second-page{
+position: relative;
+height: 300px;
+width: 481px;
+
+  #note{
+    margin-bottom:20px;
+  }
+
+  .text{
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  #send-again-cont{
+ position: absolute;
+    bottom: 40px;
+
+  #button-submit{
+
+    background-color:#777;
+    border: 1px solid black;
+    color:white;
+    width: 153px;
+    height: 24px;
+  }
+}
+
+
+// .link{
+//   text-decoration:none;
+//   color:white;
+//   width:100%;
+// }
+
+}

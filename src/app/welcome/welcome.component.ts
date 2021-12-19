@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {FormControl, NgForm, Validators} from '@angular/forms';
 import {FormGroup} from '@angular/forms';
+import { Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -9,18 +11,14 @@ import {FormGroup} from '@angular/forms';
 
 })
 export class WelcomeComponent implements OnInit {
-  email: string = '';
-  constructor(){}
 
-  emailPattern = '@'
-  ngOnInit():void{
-
+  constructor(private route: Router){
   }
+  email: any;
+  emailPattern = '@'
+  ngOnInit():void{}
 
-  onSubmit(x:any){
-    console.log(x);
-    console.log(x.email.match(this.emailPattern));
-
-
+  navToSecondComp(){
+    this.route.navigate(['/secondPage'], {queryParams:{data:this.email}})
   }
 }

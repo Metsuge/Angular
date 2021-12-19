@@ -6,7 +6,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  n:any="any";
   title = 'registration';
+  fnGetData(data:any){
+    this.n=data
+    console.log(this.n);
 
+  }
+
+message:""
 }

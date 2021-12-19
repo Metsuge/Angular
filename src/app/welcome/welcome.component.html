@@ -3,7 +3,7 @@
 <div id='proceed' class='text'>Enter your email to proceed. <br> Your email will be your username in internet bank.</div>
 
 <div>
-  <form id="email-form" #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm.value)" >
+  <form id="email-form" #emailForm="ngForm" >
   <div>
     <input [(ngModel)]="email" email name="email" id="email" #emailId="ngModel" type="email" class='form-control' placeholder="INFO@COMPANY.COM" required>
     <div class="error-msg" *ngIf="emailForm.submitted && (emailId.errors?.['email'] )">
@@ -16,6 +16,9 @@
 
   </div>
   <button type="button" id="email-sign">@</button>
-  <button type="submit" id="button-submit"><a routerLink="secondPage">START</a></button>
+  <button type="submit" (click)="navToSecondComp()"  id="button-submit" >START</button>
 </form>
 </div>
+
+
+<!-- (ngSubmit)="onSubmit(emailForm.value) routerLink="secondPage" -->
