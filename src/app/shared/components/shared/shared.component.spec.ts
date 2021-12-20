@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoComponent } from './logo.component';
+import { SharedComponent } from './shared.component';
 
-describe('LogoComponent', () => {
-  let component: LogoComponent;
-  let fixture: ComponentFixture<LogoComponent>;
+describe('SharedComponent', () => {
+  let component: SharedComponent;
+  let fixture: ComponentFixture<SharedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoComponent ]
+      declarations: [ SharedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogoComponent);
+    fixture = TestBed.createComponent(SharedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
