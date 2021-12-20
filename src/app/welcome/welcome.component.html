@@ -3,22 +3,36 @@
 <div id='proceed' class='text'>Enter your email to proceed. <br> Your email will be your username in internet bank.</div>
 
 
-  <form id="email-form" #emailForm="ngForm"  >
+  <form [formGroup]="Form" (ngSubmit)="onFormSubmit()" id="email-form"   >
   <div>
-    <input [(ngModel)]="email" pattern="emailPattern"  email name="email" id="email" #emailId="ngModel" type="email"  placeholder="INFO@COMPANY.COM" required>
-    <div class="error-msg" *ngIf="emailForm.submitted && (emailId.errors?.['email'] )">
+    <input
+    formControlName="FooNumber"
+email
+    checkEmail
+    id="email"
+    name="email"
+    type="email"
+    placeholder="INFO@COMPANY.COM"
+    required>
+
+
+    <div >
+			<div  class="error-msg"*ngIf="FooNumber?.errors?.['required'] && FooNumber?.errors?.['touched']">
+				This is a required field.
+			</div>
+			<div  class="error-msg" *ngIf="FooNumber?.errors?.['pattern']">
+				Enter a valid email.
+			</div>
+		</div>
+    <!-- <div class="error-msg" *ngIf="loginForm.invalid && loginForm.touched ">
       Enter a valid email address
     </div>
 
-    <div class="error-msg" *ngIf="(emailForm.submitted  && emailId.errors?.['required'])">
+    <div class="error-msg" *ngIf="(loginForm.invalid && loginForm.touched)">
       Enter address is required
-    </div>
+    </div> -->
 
   </div>
   <button type="button" id="email-sign">@</button>
-  <button type="submit" [disabled]= "emailId.errors?.['required'] "  (click)="navToSecondComp()"  id="button" >START</button>
+  <button type="submit" [disabled]= "Form.invalid" (click)="navToSecondComp()" id="button" >START</button>
 </form>
-
-
-
-<!-- (ngSubmit)="onSubmit(emailForm.value) routerLink="secondPage" -->
