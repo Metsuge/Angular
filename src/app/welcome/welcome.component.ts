@@ -11,34 +11,15 @@ import { Router } from '@angular/router';
 
 })
 export class WelcomeComponent implements OnInit {
-
-  constructor(private route: Router, private formBuilder: FormBuilder){
+  constructor(private route: Router){
   }
-
-  ngOnInit(): void {
-  }
-
   email: any;
- navToSecondComp(){
+  emailPattern = "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"
+  ngOnInit():void{
+
+  }
+
+  navToSecondComp(){
     this.route.navigate(['/secondPage'], {queryParams:{data:this.email}})
-  }
-  emailPattern= "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-  // isValidFormSubmitted = null;
-
-  Form = this.formBuilder.group({
-    FooNumber: ['', [Validators.required, Validators.pattern(this.emailPattern)]]
-  });
-
-  onFormSubmit() {
-  // this.isValidFormSubmitted = false;
-  if (this.Form.invalid) {
-      return;
-  }
-  // this.isValidFormSubmitted = true;
-  this.Form.reset();
-  }
-
-  get FooNumber() {
-  return this.Form.get('FooNumber');
   }
 }

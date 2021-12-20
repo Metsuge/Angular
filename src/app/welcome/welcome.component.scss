@@ -53,6 +53,10 @@ margin-top: 20px;
       height: 24px;
       font-family: 'Neucha', cursive, sans-serif;
 
+
+      button:disabled{
+        border:1px slid red;
+      }
     }
 
 }

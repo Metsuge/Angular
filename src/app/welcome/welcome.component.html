@@ -2,37 +2,21 @@
 <div id='note' class='text'>Note that the service is only available to legal entities</div>
 <div id='proceed' class='text'>Enter your email to proceed. <br> Your email will be your username in internet bank.</div>
 
-
-  <form [formGroup]="Form" (ngSubmit)="onFormSubmit()" id="email-form"   >
+<!-- [formGroup]="Form" (ngSubmit)="onFormSubmit()"
+[disabled]= "Form.invalid"
+formControlName="FooNumber"-->
+  <form  id="email-form" #emailForm="ngForm" >
   <div>
-    <input
-    formControlName="FooNumber"
-email
-    checkEmail
-    id="email"
-    name="email"
-    type="email"
-    placeholder="INFO@COMPANY.COM"
-    required>
+    <input [(ngModel)]="email" email name="email" id="email" #emailId="ngModel" type="email" class='form-control' placeholder="INFO@COMPANY.COM" required>
 
-
-    <div >
-			<div  class="error-msg"*ngIf="FooNumber?.errors?.['required'] && FooNumber?.errors?.['touched']">
-				This is a required field.
-			</div>
-			<div  class="error-msg" *ngIf="FooNumber?.errors?.['pattern']">
-				Enter a valid email.
-			</div>
-		</div>
-    <!-- <div class="error-msg" *ngIf="loginForm.invalid && loginForm.touched ">
+    <div class="error-msg" *ngIf="emailId.errors?.['email'] ">
       Enter a valid email address
     </div>
 
-    <div class="error-msg" *ngIf="(loginForm.invalid && loginForm.touched)">
+    <div class="error-msg" *ngIf="emailId.touched && emailId.errors?.['required']  ">
       Enter address is required
-    </div> -->
-
+    </div>
   </div>
   <button type="button" id="email-sign">@</button>
-  <button type="submit" [disabled]= "Form.invalid" (click)="navToSecondComp()" id="button" >START</button>
+  <button type="submit" [disabled]="emailId.errors?.['required'] || emailId.errors?.['email']"  (click)="navToSecondComp()" id="button" >START</button>
 </form>
