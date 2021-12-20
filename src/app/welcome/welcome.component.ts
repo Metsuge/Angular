@@ -1,7 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {FormBuilder, FormControl, NgForm, Validators} from '@angular/forms';
-import {FormGroup} from '@angular/forms';
-import { Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,9 +10,5 @@ export class AppComponent {
   title = 'registration';
   fnGetData(data:any){
     this.n=data
-    console.log(this.n);
-
   }
-
-message:""
 }

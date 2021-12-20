@@ -1,6 +1,6 @@
 #welcome{
-color:#000;
-font-size: 30px;
+  color:#000;
+  font-size: 30px;
 }
 
 #note{
@@ -13,8 +13,8 @@ font-size: 30px;
 }
 
 #email-form{
-position: relative;
-margin-top: 20px;
+  position: relative;
+  margin-top: 20px;
   #email{
     position: absolute;
     width: 300px;
@@ -31,39 +31,34 @@ margin-top: 20px;
     color:red;
   }
 
-    #email-sign{
-      position: absolute;
-      top: 0;
-      border-radius: 0;
-      border-style: none;
-      border: 1px solid black;
-      height: 22px;
-      width: 24px;
-      font-size: 10px;
-      color: gray;
-    }
+  #email-sign{
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    border-style: none;
+    border: 1px solid black;
+    height: 22px;
+    width: 24px;
+    font-size: 10px;
+    color: gray;
+  }
 
-    #button{
-      position: absolute;
-      top: 40px;
-      background-color:#777;
-      border: 1px solid black;
-      color:white;
-      width: 86px;
-      height: 24px;
-      font-family: 'Neucha', cursive, sans-serif;
-
-
-
-    }
-
+  #button{
+    position: absolute;
+    top: 40px;
+    background-color:#777;
+    border: 1px solid black;
+    color:white;
+    width: 86px;
+    height: 24px;
+    font-family: 'Neucha', cursive, sans-serif;
+  }
 }
 
 .error-msg{
   position: relative;
   top: 22px;
 }
-
 
 button:disabled{
   background-color: #0000001a !important;

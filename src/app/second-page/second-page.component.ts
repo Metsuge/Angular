@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SecondPageComponent implements OnInit {
   email: any;
   constructor(private route:ActivatedRoute,private router:Router) { }
+
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: any) =>{
       console.log(params);
