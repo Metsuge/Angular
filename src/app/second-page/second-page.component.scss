@@ -1,0 +1,53 @@
+#main-second-page{
+position: relative;
+height: 300px;
+width: 481px;
+
+
+#line1{
+  font-size: 25px;
+  margin-bottom: 13px;
+}
+
+#line2{
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+  .text{
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+    #button-submit{
+      margin-bottom: 13px;
+      background-color:#777;
+      border: 1px solid black;
+      color:white;
+      width: 138px;
+      height: 24px;
+      font-family: 'Neucha', cursive, sans-serif;
+
+    }
+
+    #not-received{
+      margin-bottom: 8px;
+    }
+    #send-again{
+      // position: absolute;
+      // bottom: 0;
+      border:none;
+      background-color: white;
+      text-decoration: underline;
+      font-family: 'Neucha', cursive, sans-serif;
+    }
+
+
+
+
+// .link{
+//   text-decoration:none;
+//   color:white;
+//   width:100%;
+// }
+
+}

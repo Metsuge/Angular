@@ -1,0 +1,84 @@
+
+#main-form-page{
+
+
+  #step{
+    font-size: 25px;
+    margin:0;
+
+    p{
+      font-size: 16px;
+      margin:0;
+    }
+  }
+  #continue{
+    font-size: 25px;
+    margin-top:20px;
+  }
+  #affiliation{
+    display: block;
+    // margin-bottom: 20px;
+  }
+
+  label{
+    // margin-bottom: 20px;
+    margin-top:15px;
+    font-size: 11px;
+  }
+
+  #form-container{
+    width:322px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkbox{
+    border-radius: 999px;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #000;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  .checkbox:checked{
+    background-color: black;
+  }
+
+  button{
+    background-color:#777;
+    border: 1px solid black;
+    margin-top:20px;
+    color:white;
+    width: 86px;
+    height: 24px;
+    font-family: 'Neucha', cursive, sans-serif;
+    text-transform: uppercase;
+  }
+
+  input{
+    border:1px solid black;
+    margin-bottom: 10px;
+    color:grey;
+    font-family: 'Neucha', cursive, sans-serif;
+    padding: 4px;
+    font-size: 10px;
+    height: 17px;
+  }
+
+  select{
+    border:1px solid black;
+    height: 27px;
+    font-family: 'Neucha', cursive, sans-serif;
+    text-transform: uppercase;
+  }
+
+
+}
+
