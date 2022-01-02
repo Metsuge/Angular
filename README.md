@@ -2,4 +2,4 @@ Imitation of a registration form using Angular. Live app: https://angularregistr
 
 - angular router module
 - email validation with pattern
-- data passed to siblig components using ActivatedRoute interface
+- data passed to sibling components using ActivatedRoute interface
