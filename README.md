@@ -1,4 +1,4 @@
-Imitation of a registration form using Angular. Liv app: https://angularregistration-4af96.web.app/
+Imitation of a registration form using Angular. Live app: https://angularregistration-4af96.web.app/
 
 - angular router module
 - email validation with pattern
